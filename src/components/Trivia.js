@@ -5,13 +5,12 @@ function Trivia({
   questionNumber,
   setQuestionNumber,
   setStop,
-  handleEarned,
+  setEarned,
+  moneyPyramid,
 }) {
   const [question, setQuestion] = useState(null);
   const [className, setClassName] = useState("answer");
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-
-  const [cek, setCek] = useState("ok");
 
   useEffect(() => {
     setQuestion(data[questionNumber - 1]);
@@ -21,16 +20,20 @@ function Trivia({
     setSelectedAnswer(a);
     setClassName("answer active");
 
-    console.log(question.id);
-
     setTimeout(() => {
       setClassName(a.correct ? "answer correct" : "answer wrong");
     }, 200);
 
     setTimeout(() => {
-      if (a.correct) {
+      if (a.correct && questionNumber < data.length) {
         setQuestionNumber((prev) => prev + 1);
         setSelectedAnswer(null);
+      }
+      //soal terakhir
+      else if (a.correct) {
+        setEarned(`${moneyPyramid[0].amount} !!!!!`);
+        setSelectedAnswer(null);
+        setStop(true);
       } else {
         setStop(true);
       }

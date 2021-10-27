@@ -96,9 +96,16 @@ function App() {
   ].reverse();
 
   useEffect(() => {
-    questionNumber > 1 &&
+    if (questionNumber > 1) {
       setEarned(moneyPyramid.find((m) => m.id === questionNumber - 1).amount);
+    }
   }, [questionNumber]);
+
+  const handelePlayAgain = () => {
+    setStop(false);
+    setQuestionNumber(1);
+    setEarned("$ 0");
+  };
 
   return (
     <div className="app">
@@ -106,12 +113,19 @@ function App() {
 
       <div className="main">
         {stop ? (
-          <h1 className="endText">You Earned {earned}</h1>
+          <>
+            <div className="gameOver">
+              <h1 className="endText">You Earned {earned}</h1>
+              <div className="endButton" onClick={handelePlayAgain}>
+                Play Again
+              </div>
+            </div>
+          </>
         ) : (
           <>
             <div className="top">
               <div className="timer">
-                <Timer setStop={setStop} questionNumber={questionNumber} />
+                {/* <Timer setStop={setStop} questionNumber={questionNumber} /> */}
               </div>
             </div>
             <div className="top">
@@ -120,6 +134,8 @@ function App() {
                 questionNumber={questionNumber}
                 setQuestionNumber={setQuestionNumber}
                 setStop={setStop}
+                setEarned={setEarned}
+                moneyPyramid={moneyPyramid}
               />
             </div>
           </>

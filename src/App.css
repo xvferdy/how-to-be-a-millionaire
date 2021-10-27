@@ -1,6 +1,6 @@
 * {
   /* overflow-x: hidden; */
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
 
 .app {
@@ -151,7 +151,7 @@
 }
 
 .moneyListItem.active {
-  background-color: teal;
+  background-color: dodgerblue;
 }
 
 .moneyListItemNumber {
@@ -166,9 +166,33 @@
 }
 
 /* gameover */
-.endText {
+.gameOver {
   position: relative;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  top: 50%;
+  align-items: center;
+}
+
+.endText {
+  margin-bottom: 20px;
+}
+
+.endButton {
+  width: 20%;
+  padding: 10px;
+  margin: 0 10px 20px 10px;
+  text-align: center;
+  background: linear-gradient(#0e0124, #22074d);
+  border: 1px solid white;
+  color: white;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.endButton:hover {
+  background: mediumblue;
 }
