@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function Timer({ setStop, questionNumber }) {
-  const [timer, setTimer] = useState(5);
+  const [timer, setTimer] = useState(30);
 
   useEffect(() => {
     if (timer === 0) return setStop(true);
@@ -17,7 +17,7 @@ export default function Timer({ setStop, questionNumber }) {
 
   //reset timer kalau questionNumber berubah
   useEffect(() => {
-    setTimer(5);
+    setTimer(30);
   }, [questionNumber]);
 
   return timer;

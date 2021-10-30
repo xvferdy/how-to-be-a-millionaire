@@ -137,36 +137,36 @@
   justify-content: center;
 }
 
-.moneyList {
+.money-list {
   padding: 20px;
   list-style: none;
   width: 100%;
 }
 
-.moneyListItem {
+.money-list-item {
   display: flex;
   align-items: center;
   padding: 5px;
   border-radius: 5px;
 }
 
-.moneyListItem.active {
+.money-list-item.active {
   background-color: dodgerblue;
 }
 
-.moneyListItemNumber {
+.money-list-item-number {
   width: 30%;
   font-size: 18px;
   font-weight: 100;
 }
 
-.moneyListItemAmount {
+.money-list-item-amount {
   font-size: 20px;
   font-weight: 300;
 }
 
 /* gameover */
-.gameOver {
+.game-over {
   position: relative;
   height: 100%;
   display: flex;
@@ -175,11 +175,11 @@
   align-items: center;
 }
 
-.endText {
+.end-text {
   margin-bottom: 20px;
 }
 
-.endButton {
+.end-button {
   width: 20%;
   padding: 10px;
   margin: 0 10px 20px 10px;
@@ -193,6 +193,6 @@
   cursor: pointer;
 }
 
-.endButton:hover {
+.end-button:hover {
   background: mediumblue;
 }
