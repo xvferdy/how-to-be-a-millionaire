@@ -1,20 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { GameStateContext } from "../helpers/Context";
 
-function Trivia({
-  data,
-  questionNumber,
-  setQuestionNumber,
-  setStop,
-  setEarned,
-  moneyPyramid,
-}) {
+function Trivia() {
+  const {
+    questionsDb,
+    questionNumber,
+    setQuestionNumber,
+    setStop,
+    setEarned,
+    moneyPyramid,
+  } = useContext(GameStateContext);
+
   const [question, setQuestion] = useState(null);
   const [className, setClassName] = useState("answer");
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   useEffect(() => {
-    setQuestion(data[questionNumber - 1]);
-  }, [data, questionNumber]);
+    setQuestion(questionsDb[questionNumber - 1]);
+  }, [questionsDb, questionNumber]);
 
   const handleClick = (a) => {
     setSelectedAnswer(a);
@@ -25,8 +28,9 @@ function Trivia({
     }, 200);
 
     setTimeout(() => {
-      if (a.correct && questionNumber < data.length) {
-        setQuestionNumber((prev) => prev + 1);
+      if (a.correct && questionNumber < questionsDb.length) {
+        // setQuestionNumber((prev) => prev + 1); //multiple click = setting up multiple state
+        setQuestionNumber((prev) => questionNumber + 1);
         setSelectedAnswer(null);
       }
       //soal terakhir
