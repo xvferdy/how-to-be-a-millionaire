@@ -1,62 +1,66 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { GameStateContext } from "../helpers/Context";
 
-function Trivia({
-  data,
-  questionNumber,
-  setQuestionNumber,
-  setStop,
-  setEarned,
-  moneyPyramid,
-}) {
-  const [question, setQuestion] = useState(null);
-  const [className, setClassName] = useState("answer");
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+function Trivia() {
+	const {
+		questionsDb,
+		questionNumber,
+		setQuestionNumber,
+		setStop,
+		setEarned,
+		moneyPyramid,
+	} = useContext(GameStateContext);
 
-  useEffect(() => {
-    setQuestion(data[questionNumber - 1]);
-  }, [data, questionNumber]);
+	const [question, setQuestion] = useState(null);
+	const [className, setClassName] = useState("answer");
+	const [selectedAnswer, setSelectedAnswer] = useState(null);
 
-  const handleClick = (a) => {
-    setSelectedAnswer(a);
-    setClassName("answer active");
+	useEffect(() => {
+		setQuestion(questionsDb[questionNumber - 1]);
+	}, [questionsDb, questionNumber]);
 
-    setTimeout(() => {
-      setClassName(a.correct ? "answer correct" : "answer wrong");
-    }, 200);
+	const handleClick = (a) => {
+		setSelectedAnswer(a);
+		setClassName("answer active");
 
-    setTimeout(() => {
-      if (a.correct && questionNumber < data.length) {
-        setQuestionNumber((prev) => prev + 1);
-        setSelectedAnswer(null);
-      }
-      //soal terakhir
-      else if (a.correct) {
-        setEarned(`${moneyPyramid[0].amount} !!!!!`);
-        setSelectedAnswer(null);
-        setStop(true);
-      } else {
-        setStop(true);
-      }
-    }, 1500);
-  };
+		setTimeout(() => {
+			setClassName(a.correct ? "answer correct" : "answer wrong");
+		}, 200);
 
-  return (
-    <div className="trivia">
-      <div className="question">{question?.question}</div>
-      <div className="answers">
-        {question?.answers.map((answer) => (
-          <div
-            className={selectedAnswer === answer ? className : "answer"}
-            onClick={(e) => {
-              handleClick(answer);
-            }}
-          >
-            {answer.text}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+		setTimeout(() => {
+			if (a.correct && questionNumber < questionsDb.length) {
+				// setQuestionNumber((prev) => prev + 1); //multiple click = setting up multiple state
+				setQuestionNumber((prev) => questionNumber + 1);
+				setSelectedAnswer(null);
+			}
+			// soal terakhir
+			else if (a.correct) {
+				setEarned(`${moneyPyramid[0].amount} !!!!!`);
+				setSelectedAnswer(null);
+				setStop(true);
+			} else {
+				setStop(true);
+			}
+		}, 1500);
+	};
+
+	return (
+		<div className="trivia">
+			<div className="question">{question?.question}</div>
+			<div className="answers">
+				{question?.answers.map((answer) => (
+					<div
+						className={selectedAnswer === answer ? className : "answer"}
+						onClick={(e) => {
+							handleClick(answer);
+						}}
+					>
+						{answer.text}
+					</div>
+				))}
+			</div>
+		</div>
+	);
 }
 
 export default Trivia;

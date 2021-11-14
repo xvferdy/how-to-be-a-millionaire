@@ -6,7 +6,7 @@
 .app {
   height: 100vh;
   display: flex;
-  color: white;
+  color: aliceblue;
   background-color: #020230;
 }
 
@@ -14,7 +14,7 @@
 .main {
   width: 75%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
-    url("./assets/bg.jpg") center no-repeat;
+    url("./assets/dingdong.jpg") center no-repeat;
   background-size: cover;
   flex-direction: column;
 }
@@ -22,21 +22,6 @@
 .top {
   height: 50%;
   position: relative;
-}
-
-.timer {
-  width: 70px;
-  height: 70px;
-  border: 5px solid white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  font-weight: 700;
-  position: absolute;
-  bottom: 30px;
-  left: 80px;
 }
 
 .trivia {
@@ -53,8 +38,8 @@
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid white;
-  font-size: 20px;
+  border: 2px solid aliceblue;
+  font-size: 25px;
 }
 
 .bottom {
@@ -74,16 +59,16 @@
   margin: 0 10px 20px 10px;
   text-align: center;
   background: linear-gradient(#0e0124, #22074d);
-  border: 1px solid white;
+  border: 1px solid aliceblue;
   border-radius: 15px;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
 }
 
 .answer:hover,
 .answer.active {
-  background: mediumblue;
+  background: #aa01b3;
 }
 
 .answer.correct {
@@ -94,7 +79,7 @@
   0%,
   22%,
   42% {
-    background: mediumblue;
+    background: #aa01b3;
   }
   20%,
   40%,
@@ -115,7 +100,7 @@
   0%,
   22%,
   42% {
-    background: mediumblue;
+    background: #aa01b3;
   }
   20%,
   40%,
@@ -131,10 +116,11 @@
 /* detail uang */
 .pyramid {
   width: 25%;
-  background-color: #020230;
+  background-color: #000843;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-left: 10px solid aliceblue;
 }
 
 .money-list {
@@ -151,17 +137,17 @@
 }
 
 .money-list-item.active {
-  background-color: dodgerblue;
+  background-color: #aa01b3;
 }
 
 .money-list-item-number {
   width: 30%;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 100;
 }
 
 .money-list-item-amount {
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 300;
 }
 
@@ -185,14 +171,14 @@
   margin: 0 10px 20px 10px;
   text-align: center;
   background: linear-gradient(#0e0124, #22074d);
-  border: 1px solid white;
-  color: white;
+  border: 1px solid aliceblue;
+  color: aliceblue;
   border-radius: 15px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
 }
 
 .end-button:hover {
-  background: mediumblue;
+  background: #aa01b3;
 }
