@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/how-to-be-a-millionaire/static/css/main.34179e88.chunk.css",
+    "main.js": "/how-to-be-a-millionaire/static/js/main.2a424ab0.chunk.js",
+    "main.js.map": "/how-to-be-a-millionaire/static/js/main.2a424ab0.chunk.js.map",
+    "runtime-main.js": "/how-to-be-a-millionaire/static/js/runtime-main.8acc7d02.js",
+    "runtime-main.js.map": "/how-to-be-a-millionaire/static/js/runtime-main.8acc7d02.js.map",
+    "static/js/2.37402de4.chunk.js": "/how-to-be-a-millionaire/static/js/2.37402de4.chunk.js",
+    "static/js/2.37402de4.chunk.js.map": "/how-to-be-a-millionaire/static/js/2.37402de4.chunk.js.map",
+    "index.html": "/how-to-be-a-millionaire/index.html",
+    "static/css/main.34179e88.chunk.css.map": "/how-to-be-a-millionaire/static/css/main.34179e88.chunk.css.map",
+    "static/js/2.37402de4.chunk.js.LICENSE.txt": "/how-to-be-a-millionaire/static/js/2.37402de4.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/how-to-be-a-millionaire/static/media/dingdong.bf92fcb0.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8acc7d02.js",
+    "static/js/2.37402de4.chunk.js",
+    "static/css/main.34179e88.chunk.css",
+    "static/js/main.2a424ab0.chunk.js"
+  ]
+}
