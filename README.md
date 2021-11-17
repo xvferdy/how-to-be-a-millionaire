@@ -22,6 +22,7 @@ npm install --save gh-pages
 ```
 npm run deploy
 ```
+➤ More [Information](https://create-react-app.dev/docs/deployment/#github-pages) for deploying
 
 ## 🔸 🔸 🔸 _Making it Better_ 🔸 🔸 🔸
 
