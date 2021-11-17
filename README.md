@@ -2,5 +2,7 @@
 
 #### `npm install`
 #### `npm start`
+▪️▪️▪️ _Making it Better_ ▪️▪️▪️
+#### `npm run build`
 
 # //
