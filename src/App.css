@@ -1,184 +1,184 @@
 * {
-  /* overflow-x: hidden; */
-  /* border: 1px solid grey; */
+	/* overflow-x: hidden; */
+	/* border: 1px solid grey; */
 }
 
 .app {
-  height: 100vh;
-  display: flex;
-  color: aliceblue;
-  background-color: #020230;
+	height: 100vh;
+	display: flex;
+	color: aliceblue;
+	background-color: #020230;
 }
 
 /* pertanyaan & jawaban */
 .main {
-  width: 75%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
-    url("./assets/dingdong.jpg") center no-repeat;
-  background-size: cover;
-  flex-direction: column;
+	width: 75%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+		url("./assets/dingdong-min.jpg") center no-repeat;
+	background-size: cover;
+	flex-direction: column;
 }
 
 .top {
-  height: 50%;
-  position: relative;
+	height: 50%;
+	position: relative;
 }
 
 .trivia {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .question {
-  width: 80%;
-  background: linear-gradient(#100241, black);
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid aliceblue;
-  font-size: 25px;
+	width: 80%;
+	background: linear-gradient(#100241, black);
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid aliceblue;
+	font-size: 25px;
 }
 
 .bottom {
-  height: 50%;
+	height: 50%;
 }
 
 .answers {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .answer {
-  width: 40%;
-  padding: 10px;
-  margin: 0 10px 20px 10px;
-  text-align: center;
-  background: linear-gradient(#0e0124, #22074d);
-  border: 1px solid aliceblue;
-  border-radius: 15px;
-  font-weight: 300;
-  font-size: 25px;
-  cursor: pointer;
+	width: 40%;
+	padding: 10px;
+	margin: 0 10px 20px 10px;
+	text-align: center;
+	background: linear-gradient(#0e0124, #22074d);
+	border: 1px solid aliceblue;
+	border-radius: 15px;
+	font-weight: 300;
+	font-size: 25px;
+	cursor: pointer;
 }
 
 .answer:hover,
 .answer.active {
-  background: #aa01b3;
+	background: #aa01b3;
 }
 
 .answer.correct {
-  animation: correct 1s ease forwards;
+	animation: correct 1s ease forwards;
 }
 
 @keyframes correct {
-  0%,
-  22%,
-  42% {
-    background: #aa01b3;
-  }
-  20%,
-  40%,
-  60% {
-    background: linear-gradient(#0e0124, #22074d);
-  }
-  62%,
-  100% {
-    background: green;
-  }
+	0%,
+	22%,
+	42% {
+		background: #aa01b3;
+	}
+	20%,
+	40%,
+	60% {
+		background: linear-gradient(#0e0124, #22074d);
+	}
+	62%,
+	100% {
+		background: green;
+	}
 }
 
 .answer.wrong {
-  animation: wrong 1s ease forwards;
+	animation: wrong 1s ease forwards;
 }
 
 @keyframes wrong {
-  0%,
-  22%,
-  42% {
-    background: #aa01b3;
-  }
-  20%,
-  40%,
-  60% {
-    background: linear-gradient(#0e0124, #22074d);
-  }
-  62%,
-  100% {
-    background: darkred;
-  }
+	0%,
+	22%,
+	42% {
+		background: #aa01b3;
+	}
+	20%,
+	40%,
+	60% {
+		background: linear-gradient(#0e0124, #22074d);
+	}
+	62%,
+	100% {
+		background: darkred;
+	}
 }
 
 /* detail uang */
 .pyramid {
-  width: 25%;
-  background-color: #000843;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-left: 10px solid aliceblue;
+	width: 25%;
+	background-color: #000843;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-left: 10px solid aliceblue;
 }
 
 .money-list {
-  padding: 20px;
-  list-style: none;
-  width: 100%;
+	padding: 20px;
+	list-style: none;
+	width: 100%;
 }
 
 .money-list-item {
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  border-radius: 5px;
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .money-list-item.active {
-  background-color: #aa01b3;
+	background-color: #aa01b3;
 }
 
 .money-list-item-number {
-  width: 30%;
-  font-size: 19px;
-  font-weight: 100;
+	width: 30%;
+	font-size: 19px;
+	font-weight: 100;
 }
 
 .money-list-item-amount {
-  font-size: 23px;
-  font-weight: 300;
+	font-size: 23px;
+	font-weight: 300;
 }
 
 /* gameover */
 .game-over {
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .end-text {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .end-button {
-  width: 20%;
-  padding: 10px;
-  margin: 0 10px 20px 10px;
-  text-align: center;
-  background: linear-gradient(#0e0124, #22074d);
-  border: 1px solid aliceblue;
-  color: aliceblue;
-  border-radius: 15px;
-  font-weight: 600;
-  font-size: 25px;
-  cursor: pointer;
+	width: 20%;
+	padding: 10px;
+	margin: 0 10px 20px 10px;
+	text-align: center;
+	background: linear-gradient(#0e0124, #22074d);
+	border: 1px solid aliceblue;
+	color: aliceblue;
+	border-radius: 15px;
+	font-weight: 600;
+	font-size: 25px;
+	cursor: pointer;
 }
 
 .end-button:hover {
-  background: #aa01b3;
+	background: #aa01b3;
 }
