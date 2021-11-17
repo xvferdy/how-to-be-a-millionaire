@@ -10,7 +10,7 @@
 ```
 npm install --save gh-pages
 ```
-###### Package.json
+###### package.json
 ```JSON
   "homepage": "https://myusername.github.io/how-to-be-a-millionaire",
   "scripts": {
