@@ -2,7 +2,27 @@
 
 #### `npm install`
 #### `npm start`
-▪️▪️▪️ _Making it Better_ ▪️▪️▪️
-#### `npm run deploy`
+
+## 🔸 🔸 🔸 _Making it Better_ 🔸 🔸 🔸 
+
+➤ Install `gh-pages` and add `deploy` to `scripts` in `package.json`
+```
+npm install --save gh-pages
+```
+###### package.json
+```JSON
+  "homepage": "https://myusername.github.io/how-to-be-a-millionaire",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+  },
+```
+➤ Make it live at _[gh-pages](https://pages.github.com/ "gh-pages")_
+```
+npm run deploy
+```
+➤ More [Information](https://create-react-app.dev/docs/deployment/#github-pages) for deploying
+
+## 🔸 🔸 🔸 _Making it Better_ 🔸 🔸 🔸
 
 # //
