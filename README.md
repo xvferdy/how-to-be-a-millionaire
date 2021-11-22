@@ -3,7 +3,6 @@
 #### `npm install`
 #### `npm start`
 
-
 ## 🔸 🔸 🔸 _Making it Better_ 🔸 🔸 🔸 
 
 ➤ Install `gh-pages` and add `deploy` to `scripts` in `package.json`
